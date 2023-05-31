@@ -22,10 +22,6 @@ export const navbarLinks = [
     id: 4,
     content: "visualizar",
   },
-  {
-    id: 5,
-    content: "reserva",
-  },
 ];
 
 export const buttonText = [
