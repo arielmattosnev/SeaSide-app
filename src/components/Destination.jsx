@@ -6,7 +6,7 @@ import maldives2 from "../assets/maldives2.jpg";
 
 const Destination = () => {
   return (
-    <section className="max-w=[240px] mx-auto py-16 px-4 text-center">
+    <section id="destinos" className="max-w=[240px] mx-auto py-16 px-4 text-center">
       <h1>Resorts com tudo incluso!</h1>
       <p className="py-4 text-xl font-semibold">Nas melhores praias do caribe</p>
       <div className="grid grid-rows-none md:grid-cols-5 py-4 gap-3 md:gap-4">

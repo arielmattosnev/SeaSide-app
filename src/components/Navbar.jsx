@@ -6,11 +6,13 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { buttonText, navbarLinks } from "../constants/index";
 import { useState } from "react";
 
+import { Link } from "react-scroll";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between h-20 px-6 absolute z-10 text-white w-full">
+    <nav id="home" className="flex items-center justify-between h-20 px-6 absolute z-10 text-white w-full">
       <h1>SeaSide</h1>
       <ul className={"hidden md:flex gap-4"}>
         {navbarLinks.map(({ id, content }) => (
@@ -18,7 +20,9 @@ const Navbar = () => {
             key={id}
             className="font-bold capitalize hover:scale-110 duration-300 hover:text-slate-300 cursor-pointer text-[19px]"
           >
-            {content}
+            <Link to={content} smooth duration={500}>
+              {content}
+            </Link>
           </li>
         ))}
       </ul>
@@ -56,7 +60,9 @@ const Navbar = () => {
                 key={id}
                 className="font-bold capitalize cursor-pointer text-[22px] text-center w-11/12 m-auto p-4 border-b border-black "
               >
-                {content}
+                <Link to={content} smooth duration={500}>
+                  {content}
+                </Link>
               </li>
             ))}
           </ul>
